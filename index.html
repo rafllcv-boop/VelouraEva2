@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELOURA BEAUTY | Premium Cosmetics</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Descubre maquillaje premium en Veloura Beauty. Productos inspirados en Sephora, NYX y Urban Decay.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar Sticky -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">VELOURA<span>BEAUTY</span></a>
+
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#shop">Tienda</a></li>
+                    <li><a href="#subscribe">Suscríbete</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-toggle" id="cart-toggle" aria-label="Abrir Carrito">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Carrito (Oculto por defecto) -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Tu Bolsa de Compras</h2>
+            <button class="close-cart" id="close-cart" aria-label="Cerrar Carrito">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Los items del carrito se renderizan aquí dinámicamente -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0</span>
+            </div>
+            <button class="checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+    <!-- Overlay oscuro para cuando el carrito está abierto -->
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+            <div class="hero-content fade-in-up">
+                <h1>Despierta tu Belleza</h1>
+                <p>Colección exclusiva de maquillaje premium. Expresa tu estilo único con texturas y colores de alta
+                    costura.</p>
+                <a href="#shop" class="btn-primary">Explorar Colección</a>
+            </div>
+        </section>
+
+        <!-- Sección de Productos -->
+        <section class="shop-section" id="shop">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Nuestros Elegidos</h2>
+                    <p>Descubre los favoritos de las expertas</p>
+                </div>
+
+                <!-- Filtros Interactivos -->
+                <div class="filters-container">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="search-input" placeholder="Buscar por nombre o marca...">
+                    </div>
+                    <div class="category-filter">
+                        <select id="category-select" aria-label="Filtrar por categoría">
+                            <option value="todos">Todas las categorías</option>
+                            <option value="rostro">Rostro</option>
+                            <option value="ojos">Ojos</option>
+                            <option value="labios">Labios</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Grid de Productos -->
+                <div class="products-grid" id="products-grid">
+                    <!-- Los productos se inyectan aquí vía JavaScript -->
+                </div>
+
+                <!-- Mensaje de no resultados -->
+                <div id="no-results" class="no-results hidden">
+                    <i class="fa-regular fa-face-frown"></i>
+                    <p>No encontramos productos que coincidan con tu búsqueda.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODELOS -->
+        <section class="section-models">
+            <h2>Campañas Perfumería</h2>
+
+            <div class="models">
+                <img
+                    src="https://media.vogue.mx/photos/633712ef2c756e60271d1e21/2:3/w_2560%2Cc_limit/ysl-dua-lipa-4.jpg" />
+
+                <img
+                    src="https://www.fashiongonerogue.com/wp-content/uploads/2023/12/Zoe-Kravitz-Yves-Saint-Laurent-Black-Opium-Perfume-Ad.jpg" />
+
+                <img src="https://issue-mag.cl/wp-content/uploads/2025/04/IMG_7331.jpeg" />
+
+                <img
+                    src="https://www.lancome.cl/dw/image/v2/BMLD_PRD/on/demandware.static/-/Sites-lancome-latam-hub-Library/es_CL/dw365120e9/landing-page/brand-ambassador-olivia-rodrigo/lnc_landing-banner_500×667.jpg" />
+            </div>
+        </section>
+
+        <!-- Sección Formulario Suscripción -->
+        <section class="subscribe-section" id="subscribe">
+            <div class="container subscribe-container">
+                <div class="subscribe-image">
+                    <!-- Imagen de fondo CSS o vacía para mantener minimalismo -->
+                </div>
+                <div class="subscribe-content">
+                    <h2>Únete al Club Veloura</h2>
+                    <p>Recibe accesos anticipados, tutoriales exclusivos y 15% OFF en tu primera compra.</p>
+
+                    <form id="subscribe-form" class="subscribe-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Nombre Completo <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Ej. Camila Silva">
+                            <span class="error-msg" id="error-name"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="tu@correo.com">
+                            <span class="error-msg" id="error-email"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="age">Edad <span class="required">*</span></label>
+                                <input type="number" id="age" name="age" placeholder="Años">
+                                <span class="error-msg" id="error-age"></span>
+                            </div>
+
+                            <div class="form-group half">
+                                <label for="interest">Interés Principal <span class="required">*</span></label>
+                                <select id="interest" name="interest">
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="skincare">Skincare</option>
+                                    <option value="makeup">Maquillaje</option>
+                                    <option value="perfumes">Perfumería</option>
+                                </select>
+                                <span class="error-msg" id="error-interest"></span>
+                            </div>
+                        </div>
+
+                        <div id="form-feedback" class="form-feedback hidden"></div>
+
+                        <button type="submit" class="btn-primary w-100">Suscribirme Ahora</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>VELOURA<span>BEAUTY</span></h3>
+                <p>Tu destino definitivo para belleza premium y cuidado personal.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Veloura Beauty. Todos los derechos reservados. Proyecto Académico.</p>
+        </div>
+    </footer>
+
+    <!-- Script de la aplicación -->
+    <script src="app.js"></script>
+</body>
+
+</html>
