@@ -44,7 +44,35 @@ const products = [
         price: 16000,
         category: "rostro",
         image: "https://bellisima.mx/cdn/shop/files/nyx-face-glue-fijador-03_1200x.webp"
-    }
+    },
+    {
+        id:6,
+        name:"Perversion mascara de ojos",
+        price:19000,
+        category: "ojos",
+        image:"https://i5.walmartimages.cl/asr/5a208426-9ecb-4ff0-9e20-b8778a1991b2.0256d759c20231013019538690a58353.jpeg?odnHeight=2000&odnWidth=2000&odnBg=ffffff"
+    },
+    {
+        id:7,
+        name:"Delineador de ojos Rosado",
+        price:12000,
+        category:"ojos",
+        image:"https://static.preunic.cl/63ls5fwv0eqzilh33w98laxcj5n4" 
+    },
+    {
+        id:8,
+        name:"Primer de ojos Urban Decay",
+        price:28000,
+        category:"ojos",
+        image:"https://media.falabella.com/falabellaCL/15022644_1/w=1004,h=1500,fit=pad"
+    },
+    {
+        id:9,
+        name:"Paleta de sombras Nyx",
+        price:38000,
+        category:"ojos",
+        image:"https://hips.hearstapps.com/hmg-prod/images/2elle-naked-stoned-urban-decay-1599847969.jpg?resize=980:*"
+    },  
 ];
 
 // Estado de la aplicación
